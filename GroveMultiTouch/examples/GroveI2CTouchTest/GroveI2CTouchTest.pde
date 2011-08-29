@@ -28,7 +28,7 @@ void setup() {
      Wire.begin(); // needed by the GroveMultiTouch lib
      feelers.initialize(); // initialize the feelers
      // initialize the containers
-     for(int i=1; i<=4; i++) {
+     for(int i=0; i<=3; i++) {
           padTouched[i]=false;
      }
 }
@@ -36,7 +36,7 @@ void setup() {
 void loop() {
      feelers.readTouchInputs(); // test read the touch sensors
      // loop through our touch sensors 1 to 4
-     for(int i=1; i<=4; i++) {
+     for(int i=0; i<=3; i++) {
           // get the touch state based on pin #
           if(feelers.getTouchState(i)) {
                if(!padTouched[i]) {

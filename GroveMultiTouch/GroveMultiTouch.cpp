@@ -152,9 +152,9 @@ void GroveMultiTouch::readTouchInputs(){
 }
 
 boolean GroveMultiTouch::getTouchState(int pad) {
-    if(pad < 1 || pad > 12) {
+    if(pad < 0 || pad > 11) {
         return false;
     }
-    return _touchStates[pad-1];
+    return _touchStates[pad];
 }
 
