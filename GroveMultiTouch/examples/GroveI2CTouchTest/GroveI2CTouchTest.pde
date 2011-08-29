@@ -25,8 +25,8 @@ boolean padTouched[4];
 
 void setup() {
      Serial.begin(9600); // for debugging
-     feelers.initialize(); // initialize the feelers
      Wire.begin(); // needed by the GroveMultiTouch lib
+     feelers.initialize(); // initialize the feelers
      // initialize the containers
      for(int i=1; i<=4; i++) {
           padTouched[i]=false;
