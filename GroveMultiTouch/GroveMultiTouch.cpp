@@ -10,9 +10,9 @@
 
 
 #include "GroveMultiTouch.h"
+#include "WProgram.h"
 #include "mpr121.h"
 #include <Wire.h>
-
 
 GroveMultiTouch::GroveMultiTouch(int irqPin) {
     //_wire = &wire;
@@ -25,6 +25,7 @@ void GroveMultiTouch::initialize() {
     for(int i=0; i<12; i++) {
         _touchStates[i]=0;
     }
+    mpr121_setup();
 }
 
 void GroveMultiTouch::mpr121_setup(){

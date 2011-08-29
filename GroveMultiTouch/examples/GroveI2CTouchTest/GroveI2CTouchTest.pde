@@ -19,12 +19,13 @@
 // initialize the Grove I2C touch sensor
 // IMPORTANT: in this case, INT pin was connected to pin12 of the Arduino 
 // (this is the interrupt pin)
-GroveMultiTouch feelers(12);
+GroveMultiTouch feelers(7);
  // keep track of 4 pads' states
 boolean padTouched[4];
 
 void setup() {
      Serial.begin(9600); // for debugging
+     feelers.initialize(); // initialize the feelers
      Wire.begin(); // needed by the GroveMultiTouch lib
      // initialize the containers
      for(int i=1; i<=4; i++) {
