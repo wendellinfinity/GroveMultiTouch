@@ -21,7 +21,7 @@ GroveMultiTouch::GroveMultiTouch(int irqPin) {
 
 void GroveMultiTouch::initialize() {
     pinMode(_irqPin, INPUT);
-    //digitalWrite(_irqPin, HIGH);
+    digitalWrite(_irqPin, HIGH);
     for(int i=0; i<12; i++) {
         _touchStates[i]=0;
     }
