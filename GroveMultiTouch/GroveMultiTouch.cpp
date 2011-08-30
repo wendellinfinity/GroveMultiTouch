@@ -17,11 +17,11 @@
 GroveMultiTouch::GroveMultiTouch(int irqPin) {
     //_wire = &wire;
     _irqPin = irqPin;
+    pinMode(_irqPin, INPUT);
+    digitalWrite(_irqPin, HIGH);
 }
 
 void GroveMultiTouch::initialize() {
-    pinMode(_irqPin, INPUT);
-    digitalWrite(_irqPin, HIGH);
     for(int i=0; i<12; i++) {
         _touchStates[i]=0;
     }
