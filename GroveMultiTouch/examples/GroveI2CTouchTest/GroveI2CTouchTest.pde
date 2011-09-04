@@ -17,7 +17,7 @@
 #include <GroveMultiTouch.h> // include our Grove I2C touch sensor library
 
 // initialize the Grove I2C touch sensor
-// IMPORTANT: in this case, INT pin was connected to pin12 of the Arduino 
+// IMPORTANT: in this case, INT pin was connected to pin7 of the Arduino 
 // (this is the interrupt pin)
 GroveMultiTouch feelers(7);
  // keep track of 4 pads' states
