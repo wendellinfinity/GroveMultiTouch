@@ -5,7 +5,4 @@ Prerequisite:
 A modification of the Grove I2C Touch sensor is needed
 Solder a pin to the INT terminal in the I2C sensor to connect it to one pin in Arduino
  
-Created by Wendell A. Capili, August 27, 2011.
-http://wendellinfinity.wordpress.com
- 
-Released into the public domain.
+ Released into the public domain.
