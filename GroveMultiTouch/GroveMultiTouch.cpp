@@ -109,8 +109,8 @@ boolean GroveMultiTouch::checkInterrupt(){
 
 void GroveMultiTouch::set_register(int address, unsigned char r, unsigned char v){
     Wire.beginTransmission(address);
-    Wire.send(r);
-    Wire.send(v);
+    Wire.write(r);
+    Wire.write(v);
     Wire.endTransmission();
 }
 
@@ -120,8 +120,8 @@ void GroveMultiTouch::readTouchInputs(){
         //read the touch state from the MPR121
         Wire.requestFrom(0x5A,2); 
         
-        byte LSB = Wire.receive();
-        byte MSB = Wire.receive();
+        byte LSB = Wire.read();
+        byte MSB = Wire.read();
         
         uint16_t touched = ((MSB << 8) | LSB); //16bits that make up the touch states
         
